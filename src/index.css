@@ -1,10 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* ============================= */
-/* THEME (obligatorio en v4)     */
-/* ============================= */
+@import "tailwindcss";
 
 @theme {
   --color-border: hsl(var(--border));
@@ -13,11 +7,10 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-card: hsl(var(--card));
+  --animate-meteor: meteor linear infinite;
 }
 
-/* ============================= */
-/* BASE LAYER                    */
-/* ============================= */
+
 
 @layer base {
   :root {
@@ -38,19 +31,15 @@
     --border: 217 33% 20%;
   }
 
-  * {
-    border-color: hsl(var(--border));
-  }
-
   html {
     @apply scroll-smooth;
   }
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
 
 /* ============================= */
 /* ANIMATIONS                    */
@@ -77,9 +66,7 @@
   100% { transform: rotate(215deg) translateX(-500px); opacity: 0; }
 }
 
-/* ============================= */
-/* CUSTOM CLASSES (CSS PURO)     */
-/* ============================= */
+
 
 .container-custom {
   margin-inline: auto;

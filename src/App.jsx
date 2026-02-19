@@ -1,16 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { NotFound } from "./pages/NotFound"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { ThemeToggle } from "./components/ThemeToggle"
 
-function App() { return (
-<>
-  <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-  </BrowserRouter>
-</>
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <ThemeToggle /> {}
+        
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

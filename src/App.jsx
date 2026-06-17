@@ -1,14 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { NotFound } from "./pages/NotFound"
-import { ThemeToggle } from "./components/ThemeToggle"
+import { Toaster } from "@/components/ui/toaster"
 
 function App() {
   return (
     <>
+      <Toaster />
       <BrowserRouter>
-        <ThemeToggle /> {}
-        
         <Routes>
           <Route index element={<Home />} />
           <Route path="*" element={<NotFound />} />
